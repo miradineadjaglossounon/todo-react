@@ -1,38 +1,4 @@
-/*import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App*/
 
 
 
@@ -72,22 +38,22 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 flex justify-center items-center px-4 py-10">
 
-      {/* CONTAINER GLASS */}
+      
       <div className="backdrop-blur-xl bg-white/60 shadow-2xl border border-white/40 rounded-3xl px-12 py-10 w-full max-w-xl animate-fadeIn">
 
-        {/* TITLE */}
+        
         <h1 className="text-4xl font-extrabold text-blue-800 mb-6 text-center tracking-wide drop-shadow-sm">
           Gestion des Tâches
         </h1>
 
-        {/* SUBTITLE */}
+        
         <p className="text-center text-gray-600 mb-8">
           {tasks.length === 0
             ? "Commencez par ajouter une tâche ✨"
             : `${tasks.length} tâche(s) enregistrée(s)`}
         </p>
 
-        {/* INPUT */}
+        
         <div className="flex gap-3 mb-8">
           <input
             type="text"
@@ -104,14 +70,14 @@ export default function App() {
           </button>
         </div>
 
-        {/* EMPTY MESSAGE */}
+        
         {tasks.length === 0 && (
           <p className="text-gray-500 text-center py-4 italic">
             Aucune tâche ajoutée pour le moment.
           </p>
         )}
 
-        {/* TASK LIST */}
+        
         <ul className="space-y-4">
           {tasks.map((task, index) => (
             <li
