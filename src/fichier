@@ -1,0 +1,121 @@
+/*import React, { useEffect, useState } from "react";
+
+const PRIORITIES = ["Urgent", "Moyenne", "Basse"];
+
+function App() {
+  const savedTasks = localStorage.getItem("tasks");
+  const initialTasks = savedTasks ? JSON.parse(savedTasks) : [];
+  const [text, setText] = useState("");
+  const [priority, setPriority] = useState("Moyenne");
+  const [tasks, setTasks] = useState(initialTasks);
+  const[filter, setFilter] = useState("Tous");
+
+
+
+  // sauvegarde automatique
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  const newTask = () => {
+    return {
+      id: Date.now(),
+      text: text,
+      priority: priority,
+    };
+  };
+
+  const addTache = () => {
+    if (text.trim() === "") return;
+
+    const updated = [newTask(), ...tasks];
+    setTasks(updated);
+
+    setText("");
+    setPriority("Moyenne");
+  };
+
+
+  let filteredTasks = [];
+  if(filter === Tous){
+    filteredTasks = tasks;
+  }
+  else{
+    filteredTasks = tasks.filter((tasks) => tasks.priority === filter)
+  }
+
+  let filteredTasks = [];
+
+  if(filter === "Tous") {
+    filteredTasks = tasks;
+  }else
+  {
+    filteredTasks = tasks.filter((tasks) => tasks.priority === filter)
+  }
+
+  return (
+    <div
+      className="flex justify-center min-h-screen bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/img.png')" }}
+    >
+
+      <div className="w-1/2 flex flex-col bg-base-200 my-10 p-2 rounded-2xl">
+        <div className="flex gap-4">
+          <input
+            type="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            className="input w-full"
+            placeholder="Ajouter des tâches"
+          />
+
+          <select
+            value={priority}
+            onChange={(e) => setPriority(e.target.value)}
+            className="select w-full"
+          >
+            {PRIORITIES.map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
+            ))}
+          </select>
+
+          <button onClick={addTache} className="btn bg-primary text-white rounded-lg px-6 hover:bg-prim!ary-focus">
+            Ajouter
+          </button>
+        </div>
+        <div className="space-y-2 flex-1 h-fit">
+          <div className="flex flex-wrap gap-4">
+
+            <button
+              onClick={() => setFilter("Tous")}
+              className={`btn rounded-lg px-6 border border-gray-300 text-black bg-white mt-2 hover:bg-gray-100 ${filter === "Tous" ? "bg-primary" : "bg-gray-700 hover:bg-gray-600"}`}
+              >
+          
+              Tous
+            </button>
+          </div>
+
+          {filteredTasks.length > 0 ? (
+          
+            <ul className="divide-y divide-primary/2">
+              {filteredTasks.map((task) => (
+                <li>
+                  {task.text}
+                </li>
+              ) )}
+
+            </ul>
+
+          ) : (
+            <div>test</div>
+
+          )
+          }
+        </div>
+      </div>
+    </div>
+  );
+};
+export default App;*/
